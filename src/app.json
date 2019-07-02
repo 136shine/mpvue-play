@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/movie/main",
+    "pages/index/main",
+    "pages/movie-detail/main",
+    "pages/movie-all/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [{
+      "text": "首页",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/tabs/home.png",
+      "selectedIconPath": "static/tabs/home-active.png"
+    }, {
+      "text": "电影",
+      "pagePath": "pages/movie/main",
+      "iconPath": "static/tabs/icon-movie.png",
+      "selectedIconPath": "static/tabs/icon-movie-active.png"
+    }],
+    "position": "bottom"
+  }
+}
