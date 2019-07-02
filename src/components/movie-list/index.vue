@@ -1,6 +1,12 @@
 <template>
     <div class="movieContent">
-        <div>kkkkkkkkkkkkkkkkkkk</div>
+        <div v-for="item in movieList.subjects" :key="item.title" class='moiveItem' @click="bindGoDetail(item.id)">
+            <img :src="item.images.small" />
+            <div class="movieDesc">
+            <span class="title">{{item.title}}</span>
+            <span class="grade">{{item.rating.average}}</span>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -12,7 +18,7 @@ export default {
         }
     },
     props: {
-        movieList: ''
+        movieList: []
     },
     methods: {
         bindGoDetail(id) {

@@ -4,39 +4,22 @@
       <span class="movieTypeName">{{movies.title}}</span>
       <span class="movieMore" @click="bindLoadMore">更多</span>
     </div>
-    <div class="movieContent">
-        <div>kkkkkkkkkkkkkkkkkkk</div>
-    </div>
-    <!-- <movie-list :movieList="subjects"></movie-list> -->
-    <!-- <movie-list :movieList="movies.subjects"></movie-list> -->
+    <movie-list :movieList="movies.subjects"></movie-list>
   </div>
 </template> 
 
 <script>
 import movieList from '../movie-list/index.vue'
 export default {
-    data() {
-      return {
-        subjects: 'pppppkkkkkk'
-      }
-    },
+    data() {},
     props: {
         movies: {}
     },
-    onLoad() {
-      console.log('-load--movies----')
-      console.log('-movies----', this, typeof this.movies)
-    },
-    onReady() {
-      console.log('-ready--movies----')
-    },
     // onShow() {
     //   console.log('-onShow--movies----')
-    //   this.subjects = this.movies.subjects
     // },
     methods: {
       bindLoadMore() {
-        console.log('movies--->', movies)
         let category = movies.title.split('-')[0]
         let _category = ''
         

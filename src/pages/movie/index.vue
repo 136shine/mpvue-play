@@ -4,15 +4,15 @@
         <input class="searchInput" type="text" v-model="searchVal" @click="bindKeyInput" placeholder="输入电影名" />
         <img class="searchBtn" src="/static/images/search.png" @click="bindSearchMovie" />
     </div>
-    <!-- <div> -->
+    <div>
         <movie-temp :movies="inTheatersData"></movie-temp>
-    <!-- </div> -->
-    <!-- <div>
+    </div>
+    <div>
         <movie-temp :movies="comingSoonData"></movie-temp>
     </div>
      <div>
         <movie-temp :movies="top250Data"></movie-temp>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -31,7 +31,6 @@ export default {
     }
   },
   onShow() {
-    console.log('lllllllll')
     this.getData()
   },
   components: {
@@ -48,13 +47,13 @@ export default {
         this.inTheatersData = res.data
         console.log('this.inTheatersData=>', this.inTheatersData)
       })
-      // await this.$fetch(URI, 'top250', params).then( res => {
-      //   this.top250Data = res.data
-      //    console.log('this.top250Data=>', this.top250Data)
-      // })
-      // await this.$fetch(URI, 'coming_soon', params).then(res => {
-      //   this.comingSoonData = res.data
-      // })
+      await this.$fetch(URI, 'top250', params).then( res => {
+        this.top250Data = res.data
+         console.log('this.top250Data=>', this.top250Data)
+      })
+      await this.$fetch(URI, 'coming_soon', params).then(res => {
+        this.comingSoonData = res.data
+      })
     },
     // findByType (type, page, count) {
     //     const params = { start: (page - 1) * count, count: count, city: '北京' }
