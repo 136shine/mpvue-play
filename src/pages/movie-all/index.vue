@@ -1,9 +1,9 @@
 <template>
-    <movie-list :movieList="movies"></movie-list>
+    <movie-item :movieList="movies"></movie-item>
 </template>
 
 <script>
-import movieList from '@/components/movie-list'
+import movieItem from '@/components/movie-item/index.vue'
 import { URI } from '@/utils/movie-api.js'
 export default {
     data() {
@@ -22,8 +22,8 @@ export default {
         async getMoviesByCategery(categery){
             const params = { start: (page - 1) * count, count: count, city: '北京' }
             await this.$fetch(URI, categery, params).then( res=> {
-                console.log('res=>', res)
-                this.inTheatersData = res.data
+                console.log('getMoviesByCategery---res=>', res)
+                this.movies = res.data
             })
         }
     },
@@ -32,7 +32,7 @@ export default {
         this.getMoviesByCategery(this.categery, this.page, this.count)
     },
     components: {
-        movieList
+        movieItem
     }
 }
 </script>
