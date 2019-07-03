@@ -1,6 +1,7 @@
-# mpvue_music
+# mpvue-play
 
-> A Mpvue project
+> A Mpvue project, movies of douban, rewrite the project of mini project of wechat by the frame of mpvue
+[wx_play](https://github.com/136shine/wx_play)
 
 ## Build Setup
 
@@ -35,4 +36,4 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-# mpvue-play
+
