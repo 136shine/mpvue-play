@@ -1,7 +1,7 @@
 # mpvue-play
 
-> A Mpvue project, movies of douban, rewrite the project of mini project of wechat by the frame of mpvue
-[wx_play](https://github.com/136shine/wx_play)
+> A Mpvue project, movies of douban, rewrite [wx_play](https://github.com/136shine/wx_play) that a mini project of wechat by the frame of mpvue
+
 
 ## Build Setup
 
